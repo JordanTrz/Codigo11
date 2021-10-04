@@ -76,7 +76,3 @@ Cuando los objetos están separados por defecto, se puede utilizar esta propieda
     -- Space-between: Las líneas se muestran con la misma distancia entre ellas.
     -- space-around: las líneas de muestran con la misma separación alrededor de ellas.
     -- stretch: Las líneas se estiran para ajustarse al contenedor.
-
-    mordado: todas las figuras que son pequeñas
-    verde: grandes
-    anaranjado: medianas
