@@ -27,3 +27,14 @@ Es para verificar el estatus de si hay archivos modificados y que no se han guar
 ## Git log
 
 Es para visualizar todos los commit que se hicieron en el tiempo
+
+## git remote set-url
+Esto sirve para poder cambiar el url de una repo si ya se tenía creado. ejemplo:
+
+git remote set-url origin "url"
+
+En este caso sería el ssh que ya viene por defecto
+
+## start
+
+Se puede abrir un documento con un navegador, en el caso de html este lo abre con el navegador predeterminado.
