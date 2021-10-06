@@ -1,7 +1,6 @@
 # Configurar github
 
 ## Git init
-<<<<<<< HEAD
 Se inicializa el git local de la carpeta donde nos encontramos
 
 ## git config --global user.email <email>
@@ -37,46 +36,21 @@ Si no se tiene una url, se utiliza este comando
 
 ## git remote set-url origin <url>
 Si ya secuenta con un url y se desea cambiar, se debe utilizar este comando
-=======
 
-Se inicializa el git local de la carpeta donde nos encontramos
+## git restore
+Retaura en base al última versión que se tenía registrado en el staging area
 
-## git add .
+Si se quiere restaurar solo un archivo de todos los que se modificaron, se puede realizar:
 
-pone en tracking los archivos que se tienen
+- git restore <nombre archivo>
 
-## git commit -m "comentario"
+## git reset
+Es para restaurar a una versión anterior del commit. Esto cuando los cambios ya se necuentran en el repo
 
-Guarda los archivos que se hicieron tracking
+git reset --hard <se pone el head del git log>
 
-## git remote add origin url-repo
+"Cuando se pone el --hard elimina los archivos
 
-Se tiene que configurar la URL a la que se va a realizar el push.
+Para volver a la versión anterior pero sin eliminar los archivos el comando sería:
 
-## git push origin main
-
-Hace el push del repositorio local al repo en la nube (una vez creado el url en github)
-
-## git status
-
-Es para verificar el estatus de si hay archivos modificados y que no se han guardado
-
-## Git log
-
-Es para visualizar todos los commit que se hicieron en el tiempo
-
-## git remote set-url
->>>>>>> 9f5326a067db4132fcf9e7e83544bfdb4d308877
-Esto sirve para poder cambiar el url de una repo si ya se tenía creado. ejemplo:
-
-git remote set-url origin "url"
-
-<<<<<<< HEAD
-En este caso sería el ssh que ya viene por defecto
-=======
-En este caso sería el ssh que ya viene por defecto
-
-## start
-
-Se puede abrir un documento con un navegador, en el caso de html este lo abre con el navegador predeterminado.
->>>>>>> 9f5326a067db4132fcf9e7e83544bfdb4d308877
+git reset <se pone el head del git log>
