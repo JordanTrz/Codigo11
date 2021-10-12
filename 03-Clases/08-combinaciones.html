@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    /* Esto sirve para que le dé el estilo al primer li del ul */
+    ul > li {
+      border-top: 5px solid red;
+    }
+  </style>
+  <ul>
+    <li>Unordered item</li>
+    <li>Unordered item
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ol>
+    </li>
+  </ul>
+  <style>
+    h2+p{
+      color: red;
+    }
+  </style>
+  <h2>TÍTULO H2</h2>
+  <p>Lorem, ipsum dolor.</p>
+  <p>Lorem, ipsum dolor.</p>
+  <hr>
+  <h2>TITULO H2</h2>
+  <p>Lorem, ipsum dolor.</p>
+  <p>Lorem, ipsum dolor.</p>
+
+  <style>
+    h3~p{
+      color: green;
+    }
+  </style>
+  <h3>TITULO H3</h3>
+  <p>Lorem, ipsum dolor.</p>
+  <p>Lorem, ipsum dolor.</p>
+  <p>Lorem, ipsum dolor.</p>
+  <hr>
+  <p>Lorem, ipsum dolor.</p>
+  <p>Lorem, ipsum dolor.</p>
+  <p>Lorem, ipsum dolor.</p>
+
+  <style>
+    h4,
+    p,
+    blockquote,
+    ul li{
+      color: rgb(70, 87, 214);
+      padding: 24px;
+    }
+  </style>
+  <h4>
+    titulo h4
+  </h4>
+  <p>Lorem, ipsum dolor.</p>
+  <blockquote>Lorem, ipsum dolor.</blockquote>
+
+</body>
+</html>

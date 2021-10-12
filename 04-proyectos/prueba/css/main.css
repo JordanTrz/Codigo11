@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background: #00AAB5;
+  padding: 25px 50px 25px 50px ;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  padding-top: 10px;
+}
+
+/* h3 {
+  text-align: center;
+} */
+
+/* HEADER */
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-left:300px;
+}
+
+ul a{
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.header-titulo {
+  position: absolute;
+  padding-top: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+/* Sección foto y text códiGO */
+
+.section-codigo {
+  height: 500px;
+  background: url("../img/portafolio.png");
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+/* Sección my skills */
+
+.section-myskills {
+  margin: 0px;
+  background: #7299FE;
+  height: 1000px;
+}
+
+.skill-izquierdo h3{
+  text-align: left;
+  color: white;
+  margin-left: 5%;
+}
+
+.skill-derecho h3{
+  text-align: right;
+  color: white;
+  margin-right: 5%;
+}
+
+.contenedor-izquierdo {
+  width: 40%;
+  background-color: white;
+  margin-left: 5%;
+  border-radius: 5px;
+}
+
+.contenedor-derecho {
+  width: 40%;
+  background-color: white;
+  margin-left: 55%;
+  border-radius: 5px;
+}
+
+.barra {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px ;
+  background: #000000;
+
+}
+
+.html {width: 80%;}
+.css {width: 60%;}
+.angular {width: 30%;}
+.figma {width: 90%;}
+.js {width: 50%;}
+.react {width: 40%;}
+.python {width: 80%;}
+.node {width: 70%;}

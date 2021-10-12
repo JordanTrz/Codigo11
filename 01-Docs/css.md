@@ -39,3 +39,10 @@ La propiedad de position nos ayuda a posicionar ul elemento dentro de la página
 - static: Este es el valor por defecto. 
 - sticky: Es una mezcla entre relative y fixed. Ya que se queda fijo en la pantalla (como fixed) pero siempre se debe agregar una posición con el:
   - right, left, top. 
+
+## Selectores
+
+selectores de clases, de id, de pseuodclases y de pseudoelementos
+
+
+

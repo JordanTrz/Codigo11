@@ -104,7 +104,7 @@ Actualiza y limpia el repo remoto
 ## git pull origin <branch>
 Esto se utiliza para descargar las actualizaciones que se tiene en el repo remoto
 
-## git push origin --detele <branch remoto>
+## git push origin --delete <branch remoto>
 Esto es para poder eliminar un branch en el repo remoto
 
 ## Tags
