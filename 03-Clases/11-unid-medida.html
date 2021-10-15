@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIDADES DE MEDIDA</title>
+
+  <style>
+    html{
+      font-size: 64%;
+      /* el 64% sale tomando como referencia que la fuente es de 16 en el navegador (este valor viene por defeto), y si se quiere llevar a que sea 10, sale que este es el 62.5, el profe colocó 64% aprox. */
+    }
+
+    body{
+      font-size: 1.3rem; /* El rem es una unidad de medida que toma como defecto el tamño de fuente cofigurado en el navegador */
+    }
+    h1{
+      font-size: 3rem;
+      margin: 0;
+    }
+    h1 span{
+      font-size: 0.5em;
+      margin: 0;
+    }
+    /* El em es una unidad de medida que se expresa en 1 = 100% del tamaño del padre más cercano */
+    /* Se utiliza solo para texto */
+    h2{
+      font-size: 2.4rem;
+    }
+    h3{
+      font-size: 1.8rem;
+    }
+    h4{
+      font-size: 1.6rem;
+    }
+    h5{
+      font-size: 1.4rem;
+    }
+    h6{
+      font-size: 1.3rem;
+    }
+
+    .wrapper {
+      /* max-width: 960px; */
+      height: 100vh;
+      width: 80vw;
+      margin: auto;
+      background: pink;
+    }
+    .box {
+        background: red;
+      }
+
+    .box div{
+        background: blue;
+        width: 50%;
+        height: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>TITULO
+      <span>TEXTO MAS PEQUEÑO</span>
+    </h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laborum, architecto non, explicabo consectetur at, laudantium a harum molestiae necessitatibus labore saepe voluptatibus dolore debitis cum. Dolorem dolore aut porro?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et ducimus ea voluptatibus, quibusdam sint eius. Magni, voluptates distinctio voluptas totam dolores et asperiores. Ipsa, in ipsum. Alias, culpa ex.</p>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+
+    <div class="box">
+      CAJA
+      <div>
+        CAJA ADENTRO
+      </div>
+    </div>
+  </div>
+</body>
+</html>

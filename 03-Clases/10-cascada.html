@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cascada</title>
+  <style>
+
+    /* Se debe comenzar con especificaciones globales */
+    h2 {
+      color: orange;
+    }
+
+    /* Section one */
+    .section-one h2{
+      color: green;
+    }
+
+    /* Section two */
+
+    .section-two p{
+      color: red;
+    }
+/* Cuando se es más específico, ese va a mandar al momento de especificar los atributos */
+  </style>
+</head>
+<body>
+  <main>
+    <section class="section-one">
+      <h2>título de sección</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, dolore exercitationem harum molestias nihil voluptas, fuga ipsam amet illum illo quae delectus nemo magnam facilis odio ut porro repellat nesciunt?</p>
+    </section>
+    <section class="section-two">
+      <h2>título de sección</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, dolore exercitationem harum molestias nihil voluptas, fuga ipsam amet illum illo quae delectus nemo magnam facilis odio ut porro repellat nesciunt?</p>
+    </section>
+  </main>
+</body>
+</html>
