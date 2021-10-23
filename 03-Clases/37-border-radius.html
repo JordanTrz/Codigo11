@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      height: 100vh;
+    }
+
+    div.radius{
+      width: 100px;
+      height: 100px;
+      background: red;
+      border-radius: 56px 0px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    div.flex:hover div.radius::after{
+      border-radius: 0 20px 0 20px;
+    }
+
+    div.radius:last-child{
+      margin-right: 0;
+    }
+
+    div.radius::after{
+      content: '';
+      width: 40%;
+      height: 40%;
+      background: white;
+      position: absolute;
+      border-radius: 20px 0 20px 0;
+    }
+
+    .flex{
+      display: inline-flex;
+      background: blue;
+      box-shadow: 10px 10px 1px red, 20px 20px 1px #1c0f41, 30px 30px 1px blue;
+    }
+
+    h1{
+      text-shadow: 2px 2px 0 red, 4px 4px 0 rgb(15, 170, 175), 6px 6px 0 rgb(90, 3, 3);
+      background: linear-gradient(90deg, yellow, orange) no-repeat;
+      border: 2px solid orange;
+      padding: 20px;
+      /* transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 2s; */
+      transition: all .5s ease-out;
+      cursor: pointer;
+    }
+
+    h1:hover{
+      text-shadow: -2px -2px 0 red, -4px -4px 0 rgb(15, 170, 175), -6px -6px 0 rgb(90, 3, 3);
+      background: linear-gradient(180deg, yellow, orange) no-repeat;
+      border: 10px solid orange
+    }
+
+    .lineal{
+      color: white;
+      background: linear-gradient(90deg, transparent, blue, pink, red, orange, brown) no-repeat;
+    }
+
+    .radial{
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      margin: auto;
+      background: radial-gradient(red 20%, blue 20%, orange);
+    }
+
+    p{
+      animation-name: animationExample;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      /* animation-direction: reverse; */
+      animation-fill-mode: forwards;
+    }
+
+    .icon {
+      display: block;
+      width: 110px;
+      height: 110px;
+      margin: auto;
+      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/349115/like_animation.png) 0 0 no-repeat;
+      background-size: 3000%;
+      /* animation: like-gif steps(28) 1s infinite both; */
+    }
+
+    @keyframes like-gif {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 100%;
+      }
+    }
+
+    @keyframes animationExample {
+      /* from {
+        font-size: 0px;
+        background: red;
+        color: black;
+      }
+
+      to {
+        font-size: 40px;
+        background: orange;
+        color: blue;
+      } */
+
+      0%{
+        font-size: 0px;
+        color: red;
+      }
+
+      25%{
+        font-size: 10px;
+        color: blue;
+      }
+
+      50%{
+        font-size: 20px;
+        color: orange;
+      }
+
+      75%{
+        font-size: 30px;
+        color: blueviolet;
+      }
+
+      100%{
+        font-size: 40px;
+        color: brown;
+      }
+
+    }
+
+    .has-like{
+      animation: like-gif steps(28) 1s infinite both;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="flex">
+    <div class="radius"></div>
+    <div class="radius"></div>
+  </div>
+  <br>
+  <br>
+  <h1>TEXT SHADOW</h1>
+  <button class="icon">like</button>
+  <h2 class="lineal">DEGRADADO LINEAL</h2>
+  <h2 class="radial"></h2>
+  <!-- <div class="icon"></div> -->
+  <button class="icon">like</button>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate suscipit odit officiis exercitationem quisquam assumenda sed sint expedita eligendi? Placeat impedit quod ut architecto facilis, dignissimos aut soluta sit?</p>
+
+  <script>
+    document.querySelector('button')
+    .onclick = function () {
+      document.querySelector('button').classList.add('has-like')
+      setTimeout(function() {
+        document.querySelector('button').classList.remove('has-like')
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>

@@ -57,14 +57,17 @@
       align-items: baseline;
     }
 
-    .align-self1{
-      /* display: flex; */
+    /* .align-self1{
       align-self: center;
     }
 
     .align-self2{
-      /* display: flex; */
       align-self: flex-end;
+    } */
+
+    .flex-direction{
+      flex-direction: column;
+      height: 100px;
     }
 
   </style>
@@ -73,27 +76,27 @@
   <h2>ALIGN ITEMS</h2>
   <hr>
   <h3>flex-start</h3>
-  <div class="flex">
+  <div class="flex align-items-flex-start flex-direction">
     <div class="align-self1">LOGO</div>
     <div class="align-self2">NAV</div>
   </div>
   <h3>flex-end</h3>
-  <div class="flex align-items-flex-end">
+  <div class="flex align-items-flex-end flex-direction">
     <div>LOGO</div>
     <div>NAV</div>
   </div>
   <h3>center</h3>
-  <div class="flex align-items-center">
+  <div class="flex align-items-center flex-direction">
     <div>LOGO</div>
     <div>NAV</div>
   </div>
   <h3>stretch</h3>
-  <div class="flex align-items-stretch">
+  <div class="flex align-items-stretch flex-direction">
     <div>LOGO</div>
     <div>NAV</div>
   </div>
   <h3>baseline</h3>
-  <div class="flex align-items-baseline">
+  <div class="flex align-items-baseline flex-direction">
     <div style="line-height: 100px;">LOGO</div>
     <div style="line-height: 60 px;">NAV</div>
   </div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex grow</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header, footer{
+      background: red;
+      padding: 20px;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+    }
+
+    main aside{
+      background: green;
+      width: 150px;
+    }
+
+    main>section{
+      flex-grow: 1;
+      background: pink;
+    }
+
+    aside~section{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      HEADER
+    </header>
+    <main>
+      <aside>ASIDE</aside>
+      <section>CONTENIDO PRINCIPAL</section>
+    </main>
+    <footer>
+      FOOTER
+    </footer>
+  </div>
+</body>
+</html>

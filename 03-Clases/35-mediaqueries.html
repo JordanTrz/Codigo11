@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    div {
+      background: red;
+    }
+
+    /* Puntos de quiebre
+      MOBILE CS // 0 > 320PX
+      MOBILE SM // 320px > 480px
+      MOBILE LARGE //  481px > 680px
+      TABLET // 681px > 840px
+      DESKTOP // 841px > tamaño del layout
+      DESKTOP XL //  tamaño del layout > tamaño que deseas
+    */
+
+    /*
+    > 320px
+     */
+    @media (min-width: 320px){
+      /* div{
+        background: orange ;
+      } */
+    }
+    /*
+    < 980px
+    */
+    @media (max-width: 980px){
+      /* div{
+        background: blue;
+      } */
+    }
+
+    /* Mayor de 400px */
+    @media (min-height: 400px){
+      /* div{
+        background: blueviolet;
+      } */
+    }
+
+    @media (max-height: 800px) {
+      div{
+        background: brown;
+
+      }
+    }
+
+    @media (orientation: landscape) {
+      div{
+        color: white;
+      }
+    }
+
+    @media (orientation: portrai) {
+      div{
+        color: blue;
+      }
+    }
+
+  </style>
+</body>
+<div>
+  <header>HEADER</header>
+  <main>MAIN</main>
+  <footer>FOOTER</footer>
+</div>
+</html>
