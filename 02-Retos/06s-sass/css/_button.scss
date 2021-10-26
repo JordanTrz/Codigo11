@@ -8,16 +8,16 @@
     border-radius: $btn-border-radius;
     height: $btn-height;
     width: auto;
+    // padding: $btn-padding-y $btn-padding-x;
     margin: $btn-margin-y $btn-margin-x;
-    padding: $btn-padding-y $btn-padding-x;
     transition: all .2s ease-in-out;
 
     &:hover{
         background: rgb(126, 124, 124);
         color: white;
-        border-color: rgb(126, 124, 124);
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        border-color: rgb(72, 71, 71);
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
     }
 }

@@ -3,9 +3,10 @@
     border-color: $color;
 }
 
-@mixin btn-size($size){
+@mixin btn-size($size,$font-size){
     height: $size;
-    width: $size+50px;
+    width: $size+40px;
+    font-size: $font-size;
 }
 
 .btn-color-1{@include btn-color($color-1)}
@@ -14,8 +15,8 @@
 .btn-color-4{@include btn-color($color-4)}
 .btn-color-5{@include btn-color($color-5)}
 
-.btn-size-1{@include btn-size($height-1)}
-.btn-size-2{@include btn-size($height-2)}
-.btn-size-3{@include btn-size($height-3)}
-.btn-size-4{@include btn-size($height-4)}
-.btn-size-5{@include btn-size($height-5)}
+.btn-size-1{@include btn-size($height-1,$font-1)}
+.btn-size-2{@include btn-size($height-2,$font-2)}
+.btn-size-3{@include btn-size($height-3,$font-3)}
+.btn-size-4{@include btn-size($height-4,$font-4)}
+.btn-size-5{@include btn-size($height-5,$font-5)}
