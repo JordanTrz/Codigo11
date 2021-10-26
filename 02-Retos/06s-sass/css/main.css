@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+}
+
+body {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  font-family: "arial";
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 10px;
+  height: 80px;
+  width: auto;
+  margin: 20px 20px;
+  padding: 20px 20px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+  background: #7e7c7c;
+  color: white;
+  border-color: #7e7c7c;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btn-color-1 {
+  background: red;
+  border-color: red;
+}
+
+.btn-color-2 {
+  background: blue;
+  border-color: blue;
+}
+
+.btn-color-3 {
+  background: yellow;
+  border-color: yellow;
+}
+
+.btn-color-4 {
+  background: green;
+  border-color: green;
+}
+
+.btn-color-5 {
+  background: pink;
+  border-color: pink;
+}
+
+.btn-size-1 {
+  height: 80px;
+  width: 130px;
+}
+
+.btn-size-2 {
+  height: 100px;
+  width: 150px;
+}
+
+.btn-size-3 {
+  height: 120px;
+  width: 170px;
+}
+
+.btn-size-4 {
+  height: 140px;
+  width: 190px;
+}
+
+.btn-size-5 {
+  height: 160px;
+  width: 210px;
+}
+/*# sourceMappingURL=main.css.map */

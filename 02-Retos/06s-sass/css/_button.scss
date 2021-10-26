@@ -1,0 +1,23 @@
+.btn{
+    display: inline-block;
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    border: $btn-border-width solid;
+    border-radius: $btn-border-radius;
+    height: $btn-height;
+    width: auto;
+    margin: $btn-margin-y $btn-margin-x;
+    padding: $btn-padding-y $btn-padding-x;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        background: rgb(126, 124, 124);
+        color: white;
+        border-color: rgb(126, 124, 124);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+}

@@ -1,0 +1,21 @@
+@mixin btn-color($color){
+    background: $color;
+    border-color: $color;
+}
+
+@mixin btn-size($size){
+    height: $size;
+    width: $size+50px;
+}
+
+.btn-color-1{@include btn-color($color-1)}
+.btn-color-2{@include btn-color($color-2)}
+.btn-color-3{@include btn-color($color-3)}
+.btn-color-4{@include btn-color($color-4)}
+.btn-color-5{@include btn-color($color-5)}
+
+.btn-size-1{@include btn-size($height-1)}
+.btn-size-2{@include btn-size($height-2)}
+.btn-size-3{@include btn-size($height-3)}
+.btn-size-4{@include btn-size($height-4)}
+.btn-size-5{@include btn-size($height-5)}
