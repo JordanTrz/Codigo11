@@ -1,0 +1,61 @@
+// Creación de variables
+
+$bg-color: #000;
+$bg-div: #db1;
+$color-white: #ccc;
+$color-red: rgb(250, 0, 0);
+
+@mixin theme($theme: #fff) {
+  background-color: $theme;
+  color: #fff;
+}
+
+@mixin alertTheme($color: #28e667, $padding: 10px) {
+  background-color: $color;
+  color: $color-white;
+  padding: $padding;
+  border: 1px solid $bg-color;
+  border-radius: 10px;
+}
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background-color: $bg-color;
+}
+
+div{
+  color: $bg-div;
+  font-family: arial;
+}
+
+h1{
+  font-size: 23px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin displayContainer(
+  $height: 600px,
+  $flex: flex,
+  $justify: space-between,
+  $align: flex-start)
+{
+  height: $height;
+  display: $flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.alerta-success{
+  @include alertTheme;
+}
+
+.alerta-warning{
+  @include alertTheme($color: #ffc107,$padding:120px)
+}

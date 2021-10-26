@@ -8,7 +8,7 @@
 
 .global-wrapper{
   width: 100%;
-  max-width: 1400px;
+  max-width: 1280px;
   margin: auto;
 }
 
@@ -23,8 +23,8 @@ h2 {
   text-align: center;
   color: white;
   font-weight: bold;
-  font-size: 40px;
-  padding-top: 10px;
+  font-size: 3rem;
+  padding: 40px 0;
 }
 
 /* HEADER */
@@ -49,19 +49,18 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin: auto 10px;
-  width: 50%;
+  width: 55%;
 }
 
 .header ul a{
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
 /* Sección foto y text códiGO */
 .section-codigo {
-  background: url("../img/portafolio.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("../img/portafolio.png") no-repeat center center/cover;
   width: 100%;
   height: 800px;
 }
@@ -73,24 +72,19 @@ h2 {
   color: white;
 }
 
-.section-myskills>h2{
-  color: #B508A3;
-  font-size: 3rem;
-  font-weight: bold;
-  padding: 40px 0;
-}
+.section-myskills>h2{color: #B508A3;}
 
-.skills{
+.skills-wrapper{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin: auto;
 }
 
-.skills>div{
+.skills-wrapper>div{
   margin-bottom: 18px;
 }
 
-.skills h3{
+.skills-wrapper h3{
   margin-left: 10%;
 }
 
@@ -124,26 +118,20 @@ h2 {
   height: 550px;
 }
 
-.section-servicios>h2{
-  color: #00CC9B;
-  font-size: 3rem;
-  font-weight: bold;
-  padding-top: 40px;
-}
+.section-servicios>h2{color: #00CC9B;}
 
 .servicios-wrapper{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  margin: 3% auto;
+  grid-template-columns: repeat(3,30%);
+  grid-template-rows: 140px 140px;
+  margin: auto;
   font-size: 1.5rem;
+  justify-content: center;
 }
 
 .servicios-wrapper>div{
   margin: 40px auto;
-}
-
-.imagen{
-  padding-left: 40%;
+  text-align: center;
 }
 
 /* portafolio */
@@ -153,23 +141,167 @@ h2 {
   height: 550px;
 }
 
-.section-portafolio>h2{
-  color: #8402A5;
-  font-size: 3rem;
-  font-weight: bold;
-  padding-top: 40px;
-}
+.section-portafolio>h2{color: #8402A5;}
 
 .portafolio-wrapper{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  margin: 6% auto;
+  grid-template-columns: repeat(4,20%);
+  margin: 2% auto 0;
   gap: 20px;
+  justify-content: center;
 }
 
 .portafolio-wrapper img{
   margin: auto;
-  display: block;
   width: auto;
   height: 120px;
+}
+
+/* Clientes */
+.section-clientes{
+  background: #3F4E62;
+  height: 300px;
+}
+
+.section-clientes h2{color: #FF00C7;}
+
+.clientes-wrapper{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clientes-wrapper img{
+  margin: auto;
+  width: auto;
+}
+
+/* Contacto */
+
+.section-contacto{
+  background: #16A085;
+  height: 550px;
+}
+
+.section-contacto>h2{color: #CEE000;}
+
+::placeholder{
+  color: #666666;
+  font-weight: bold;
+}
+
+.contacto-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2,400px);
+  grid-template-rows: 50px 50px 100px;
+  gap: 20px;
+  margin: auto;
+  justify-content: center;
+}
+
+.contacto-wrapper input:nth-child(5){
+  grid-column-end: span 2;
+  grid-row-end: span 3;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 0;
+}
+
+.button button{
+  padding: 10px 20px;
+  background: #233451;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* footer */
+
+.section-footer{
+  background: #00AAB5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  color: white;
+  padding: 20px;
+}
+
+/* RESPONSIVE */
+
+/* Screen desktop */
+@media (max-width: 979px) {
+  /* Repeat */
+
+  .section{
+    height: 100%;
+  }
+
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+    /* margin: auto; */
+  }
+
+  /* header */
+  .header{
+    display: none;
+  }
+
+  .section-codigo h1{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: gray;
+  }
+
+  .section-codigo {
+    background: url("../img/portafolio.png") no-repeat center center/cover;
+    width: auto;
+  }
+
+  /* skills */
+
+  /* Servicios */
+
+  /* Portafolio */
+
+  .portafolio-wrapper img{
+    width: 50%;
+    height: auto;
+  }
+
+  /* clientes */
+
+  /* Contacto */
+
+  .contacto-wrapper{
+    align-items: center;
+  }
+
+  .contacto-wrapper input{
+    height: 60px;
+    width: 80%;
+    border-radius: 8px;
+  }
+
+  .contacto-wrapper input:last-child{
+    height: 150px;
+  }
+
+  .button button{
+    border-radius: 8px;
+  }
+
+  /* FOOTER */
+  .section-footer{
+    display: none;
+  }
+
 }
