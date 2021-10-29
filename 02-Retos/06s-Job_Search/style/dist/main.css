@@ -29,7 +29,7 @@ body {
     transition: all .2s ease-in-out; }
 
 .nav-search {
-  background: url(/02-Retos/06s-Job_Search/img/nav-search.jpg) center center/cover;
+  background: url(../../img/nav-search.jpg) center center/cover;
   margin: auto;
   height: 138px;
   display: flex;
