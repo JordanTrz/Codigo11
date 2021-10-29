@@ -179,9 +179,10 @@ header {
   color: gray; }
 
 @media (max-width: 800px) {
-  .global-wrapper {
-    width: 95%;
+  * {
     overflow: hidden; }
+  .global-wrapper {
+    width: 95%; }
   .nav-search {
     width: auto; }
     .nav-search i {
@@ -238,3 +239,9 @@ header {
         width: 5%; }
   .footer {
     font-size: 10px; } }
+
+@media (max-width: 400px) {
+  .icons {
+    display: none; }
+  .aside-search input:nth-child(3) {
+    width: 70%; } }
