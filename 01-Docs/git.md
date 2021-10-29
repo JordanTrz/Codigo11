@@ -2,6 +2,8 @@
 
 ## Git init
 Se inicializa el git local de la carpeta donde nos encontramos
+## git status
+Es para verificar el estatus de si hay archivos modificados y que no se han guardado
 
 ## git config --global user.email <email>
 Es para agregar el email a git
@@ -35,11 +37,9 @@ Guarda los archivos que se hicieron tracking
 ## git remote add origin url-repo
 Se tiene que configurar la URL a la que se va a realizar el push.
 
-## git push origin main
+## git push origin "main"
 Hace el push del repositorio local al repo en la nube (una vez creado el url en github)
 
-## git status
-Es para verificar el estatus de si hay archivos modificados y que no se han guardado
 
 ## git log
 Es para visualizar todos los commit que se hicieron en el tiempo
@@ -81,6 +81,8 @@ Para volver a la versión anterior pero sin eliminar los archivos el comando ser
 
 git reset <se pone el head del git log>
 
+## git checkout "nombre de branch"
+Se usa para pasar a los diferentes branchs
 ## git checkout -b
 se utiliza un nuevo branch:
 

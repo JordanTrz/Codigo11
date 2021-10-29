@@ -1,0 +1,23 @@
+.btn{
+  min-width: 120px;
+  padding: 10px 15px;
+  border: 1px solid gray;
+  background-color: gray;
+  font-size: 14px;
+}
+
+.btn-primary{
+  background-color: orange;
+  border-color: orange;
+}
+
+.btn-secondary{
+  background-color: green;
+  border-color: green;
+}
+
+.btn-sm{
+  font-size: 12px;
+  min-width: 80px;
+  padding: 8px 10px;
+}
