@@ -1,0 +1,42 @@
+.section-abstract{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.abstract-text{
+  width: 40%;
+
+  div{
+    display: flex;
+    margin-top: 30px;
+
+    button{
+      margin-right: 20px;
+    }
+  }
+}
+
+.abstract-foto{
+  display: flex;
+  justify-content: flex-end;
+
+  div{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+}
+
+.btn{
+  padding: 10px 40px;
+  background: #6D0AD3;
+  border: 1px solid #6D0AD3;
+  border-radius: 5px;
+  color: #EDE2FA;
+}
+
+.down{
+  display: flex;
+  justify-content: center;
+}

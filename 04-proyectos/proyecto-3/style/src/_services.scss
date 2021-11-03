@@ -1,0 +1,28 @@
+.section-services >div{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2,auto);
+  gap: 25px;
+}
+
+.services-box{
+  height: 220px;
+  width: 310px;
+  background: #00CF95;
+  border: 5px solid #D1FFA2;
+  position: relative;
+
+  div{
+    height: 50px;
+    padding: 5px 30px;
+    background: #D1FFA2;
+    color: #5A0CB0;
+    vertical-align: auto;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    border-radius: 10px 0 0 10px;
+  }
+}

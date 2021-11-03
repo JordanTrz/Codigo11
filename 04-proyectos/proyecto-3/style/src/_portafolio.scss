@@ -1,0 +1,10 @@
+.section-portafolio div{
+  display: grid;
+  grid-template-columns: repeat(4,250px);
+  justify-content: center;
+  gap: 20px;
+
+  img{
+    height: 250px;
+  }
+}

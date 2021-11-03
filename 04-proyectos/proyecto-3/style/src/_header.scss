@@ -1,0 +1,18 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.logo{
+  height: 60px;
+}
+
+.nav{
+  margin: auto 0;
+  display: flex;
+  list-style-type: none;
+  li{
+    padding: 0 10px;
+  }
+}
