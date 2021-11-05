@@ -3,6 +3,12 @@ let y = parseInt(prompt("Ingrese el segundo valor"));
 maths(x,y);
 
 function maths(alpha,omega){
+  suma(alpha,omega);
+  resta(alpha,omega);
+  multiplicacion(alpha,omega);
+  division(alpha,omega);
+  potencia(alpha,omega);
+
   function suma(a,b){
     console.log("La suma es: ",a+b);
   }
@@ -18,9 +24,4 @@ function maths(alpha,omega){
   function potencia(a,b){
     console.log("La potencia es: ",a**b);
   }
-suma(alpha,omega);
-resta(alpha,omega);
-multiplicacion(alpha,omega);
-division(alpha,omega);
-potencia(alpha,omega);
 }
