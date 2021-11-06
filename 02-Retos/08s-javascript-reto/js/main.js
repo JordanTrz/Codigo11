@@ -7,7 +7,7 @@
 // inch_metro(); // ejercicio 7
 // dolares(); // ejercicio 8
 // años(); // ejercicio 9
-// menorEdad(); // ejercicio 10
+menorEdad(); // ejercicio 10
 // bono(); // ejercicio 11
 // salarioTotal(); // ejercicio 12
 // alumnos(); // ejercicio 13
@@ -19,7 +19,6 @@ function suma(){
   alert('Ingrese dos valores para sumar');
   let x = Number(prompt("Ingrese primer valor"));
   let y = Number(prompt("Ingrese segundo valor"));
-
   console.log(`La suma de ${x} y ${y} es ${x+y}`)
 }
 
@@ -96,23 +95,26 @@ function años(){
 
 // Ejercicio 10
 function menorEdad(){
-  let cantidad = prompt("Ingrese la cantidad de personas");
-  let nombre = Array(cantidad);
-  let edad= Array(cantidad);
+  debugger;
+  let cantidad = Number(prompt("Ingrese la cantidad de personas"));
+  let data={
+    nombre: Array(cantidad),
+    edad: Array(cantidad)
+  }
 
   for (let i=0;i<cantidad;i++){
-    nombre[i]=prompt(`Ingrese el nombre de la persona #${i+1}`);
-    edad[i]=Number(prompt(`Ingrese la edad de la persona #${i+1}`));
+    data.nombre[i]=prompt(`Ingrese el nombre de la persona #${i+1}`);
+    data.edad[i]=Number(prompt(`Ingrese la edad de la persona #${i+1}`));
   }
   let x = 0;
   for (let i=0;i<cantidad;i++){
-    if (edad[i] < edad[x]){
+    if (data.edad[i] < data.edad[x]){
       x = i;
     }
     else{x = x;}
   }
-  console.log(`La persona con menor edad es ${nombre[x]} ya que tiene ${edad[x]} años`);
-  alert(`La persona con menor edad es ${nombre[x]} ya que tiene ${edad[x]} años`);
+  console.log(`La persona con menor edad es ${data.nombre[x]} ya que tiene ${data.edad[x]} años`);
+  alert(`La persona con menor edad es ${data.nombre[x]} ya que tiene ${data.edad[x]} años`);
 }
 
 // Ejercicio 11
