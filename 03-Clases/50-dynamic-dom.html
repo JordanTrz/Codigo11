@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic DOM</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: arial;
+    }
+
+    input{
+      width: 100%;
+      padding: 10px;
+      transition: all .5s ease;
+      border-radius: 8px;
+      border: 1px solid #cacaca;
+    }
+
+    form input:focus{
+      outline: none;
+      box-shadow: 0 0 3px #dadada;
+    }
+
+    form input:focus:required{
+      border-color: red;
+    }
+
+    form div{
+      padding: 10px;
+    }
+
+    form button{
+      width: 100%;
+      padding: 10px;
+      background-color: green;
+      color: white;
+      border: 1px solid green;
+    }
+
+    h1{
+      text-align: center;
+      margin: 20px 0 10px;
+    }
+
+    .app{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+      padding: 20px;
+      border: 1px solid #cdcdcd;
+      margin: 15px;
+      border-radius: 4px;
+      background-color: #ebebeb;
+    }
+
+    .card{
+      border: 1px solid #cdcdcd;
+      padding: 10px;
+      border-radius: 4px;
+      position: relative;
+      background-color: white;
+    }
+
+    .card:hover{
+      box-shadow: 0 0 10px rgb(161,161,161);
+    }
+
+    .card h2{
+      font-size: 13px;
+      color: #616161;
+      margin-bottom: 4px;
+    }
+
+    .card h2 span{
+      color: black;
+    }
+
+    .card img{
+      width: 100%;
+    }
+
+    .card button{
+      position: absolute;
+      top:-15px;
+      right: -15px;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      background-color: red;
+      color: white;
+      border: 1px solid red;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>FORMULARIO</h1>
+  <form autocomplete="off" action="">
+    <div>
+      <input class="js_name" type="text" placeholder="Nombre" required>
+    </div>
+    <div>
+      <input class="js_lastName" type="text" placeholder="Apellido" required>
+    </div>
+    <div>
+      <input class="js_age" type="number" placeholder="Edad" required>
+    </div>
+    <div>
+      <input class="js_photo" type="text" placeholder="URL FOTOGRAFIA" required>
+    </div>
+    <div>
+      <button>ENVIAR</button>
+    </div>
+  </form>
+  <div class="app">
+  </div>
+
+  <script>
+    const inputName = document.querySelector('.js_name');
+    const inputLastName = document.querySelector('.js_lastName');
+    const inputAge = document.querySelector('.js_age');
+    const inputPhoto = document.querySelector('.js_photo');
+    const form = document.querySelector('form');
+    const app = document.querySelector('.app')
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const article = document.createElement('article');
+      article.innerHTML = `
+        <h2>Nombre completo <span>${inputName.value} ${inputLastName.value}</span></h2>
+        <h2>Edad <span> ${inputAge.value} </span></h2>
+        <figure>
+          <img src=${inputPhoto.value} alt="${inputName.value} ${inputLastName.value}" />
+        </figure>
+        <button>x</button>`;
+      article.classList.add('card');
+      article.querySelector('button').onclick = function (){
+        const flag = confirm('Estas seguro que deseas eliminarla tarjeta?');
+        if(flag) app.removeChild(article);
+      }
+
+      app.appendChild(article);
+      this.reset();
+    })
+
+  </script>
+</body>
+</html>

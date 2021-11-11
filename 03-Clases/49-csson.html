@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSSON</title>
+  <style>
+    .d-show{
+      display: block;
+    }
+
+    .d-none{
+      display: none;
+    }
+
+    .format-title{
+      background-color: red;
+      color: orange;
+      padding: 20px;
+    }
+
+    .button-active{
+      background-color: green;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>TITULO PRINCIPAL</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur officia aliquam totam enim. Maxime corporis obcaecati error qui totam magnam eveniet? Nam quo laboriosam quidem consequatur, a illum aliquid.</p>
+  <button>BUTTON</button>
+  <script>
+    const h1 = document.querySelector('h1');
+    const button = document.querySelector('button');
+
+    button.onclick = function (){
+      console.log('this.textContent',this.textContent);
+      if (this.textContent == 'Presionado'){
+        this.textContent = 'Sin Presionar';
+        h1.style.border = "";
+      } else{
+        this.textContent = 'Presionado';
+        h1.style.border = '10px solid black';
+      }
+      this.classList.toggle('button-active');
+      h1.classList.toggle('format-title');
+    }
+  </script>
+</body>
+</html>
