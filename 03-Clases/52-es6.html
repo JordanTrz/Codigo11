@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6</title>
+</head>
+<body>
+  <script>
+
+    // Arrow Function
+    function fn(a,b){
+      return a+b;
+    }
+    const fnArrow = (a,b) => a+b;
+    console.log(fn(2,3));
+    console.log(fnArrow(2,3));
+
+    // Parámetros por defecto
+    function getData(name = "Jordan", lastname = "Terrazos", age = 27){
+      return `${name} ${lastname} ${age}`;
+    }
+
+    // Parámetros rest
+    function suma(a, b, ...c){
+      let resultado = a + b;
+
+      c.forEach((n) => {
+        resultado += n;
+      })
+
+      return resultado;
+    }
+    console.log(suma(1,2,3,4,5,6,7,8,9,10));
+
+    // Spread operator
+    const datos = ["hola", "como", "estas", "jose"]
+
+    console.log(...datos);
+    console.log(datos[0], datos[1], datos[2], datos[3])
+
+    function limpiarEspacios(...cadenas){
+      for (let i=0; i<cadenas.length;i++){
+        cadenas[i] = cadenas[i].trim();
+      }
+      return cadenas;
+    }
+
+    const cadenasCol = ['hola  sdfg                     ', 'algo     ','     mas','asdf       asdf     ']
+
+    let cadenasLimpias = limpiarEspacios(...cadenasCol);
+    console.log(cadenasLimpias);
+
+    const col = [0,1,2,3,4];
+    const col2 = [...col,5,6];
+
+    console.log('col', col);
+    console.log('col2', col2);
+
+    const obj = {
+      name: 'Jordan',
+      lastname: 'Terrazos'
+    };
+
+    const obj2 = {
+      ...obj,
+      age: 27
+    }
+
+    console.log('obj',obj);
+    console.log('obj2',obj2);
+
+    // OBJETCS
+
+    function UserObject(name = "Jordan", lastname = "terrazos", age = 34){
+      return{
+        name,
+        lastname,
+        age
+      }
+    }
+
+    // const user = {
+    //   name: 'kasndf',
+    //   lastname: 'kjasndfkjasdf',
+    //   age: 12
+    // }
+
+    const user = UserObject('Ethan','Liam',5);
+    const user2 = UserObject('luce','ybarhuen',28);
+
+    // METODOS CONCISOS
+
+      const obj3 = {
+      fn: function(){
+        console.log(this)
+        }
+      };
+
+      obj3.fn();
+
+      const obj4 = {
+        fn(){
+          console.log(this)
+        }
+      }
+      obj4.fn();
+
+    // COPIAR OBJETOS CON ERROR
+
+    let valorUno = "Sebastian";
+    let valorDos = valorUno;
+    valorUno = "JOSE";
+
+    console.log('valorDos', valorDos);
+    console.log('valorUno', valorUno);
+
+    let objOriginal = {
+      name: 'sebastian'
+    }
+
+    let objCopia = objOriginal;
+    objOriginal.name = "JOSE";
+
+    console.log(objCopia.name)
+    console.log(objOriginal.name)
+
+    // COPIA OBJETOS DE MANERA CORRECTA
+    let objOriginal2 = {
+      name: 'sebas'
+    };
+
+    // Se puede realizar copia de dos formas
+    // 1.-
+    // let objCopia2 = Object.assign({}, objOriginal2);
+    // 2.-
+    let objCopia2 = {...objOriginal2};
+    objOriginal2.name = "JOSE";
+
+    console.log(objOriginal2.name);
+    console.log(objCopia2.name);
+
+    // Destructuring
+
+    const objDes = {
+      name: 'Jordan',
+      lastname: 'Terrazos',
+      age: 18,
+      data: {
+        address: 'siempre viva',
+        url: 'www.google.com'
+      }
+    }
+
+    objDes.name; // Jordan
+    objDes.lastname // Terrazos
+
+    let {
+      name,
+      lastname,
+      age,
+      data: {
+        address,
+        url: urlcambiado
+      }
+    } = onjDes
+
+    console.log(name);
+    console.log(lastname);
+    console.log(age);
+    console.log('address',address);
+    console.log('url',urlCambiado);
+
+    // destructuring array
+    const arr = [0, 14, 3 ,4, 5, 6];
+    const arr2 = [...arr]; // con el array tmb es lo mismo al copia porque es un objeto
+
+    console.log(arr2)
+    arr.push(5)
+    console.log('arr',arr)
+    console.log('arr2',arr2)
+
+    let[
+      firstNumber,
+      secondNumer,
+      ,
+      ,
+      ,
+      six
+    ] = arr
+
+    console.log(firstNumber)
+    console.log(secondNumer)
+    console.log(six)
+
+  </script>
+</body>
+</html>

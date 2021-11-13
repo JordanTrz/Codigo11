@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>METODOS DOM</title>
+</head>
+<body>
+  <!-- replaceChild -->
+  <div class="replaceChild">
+    <button class="btn-repalceChild">REEMPLAR</button>
+    <div class="container">
+      <h2>Hola mundo por defecto</h2>
+    </div>
+  </div>
+  <hr>
+
+  <!-- cloneNode() -->
+  <div class="cloneNode">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </div>
+  <hr>
+  <!-- insertBefore -->
+  <div class="insertBefore">
+    <button class="btn-insertBefore">INTSERT BEFORE</button>
+    <div class="container2">
+      <h2>Hola mundo por defecto</h2>
+    </div>
+  </div>
+
+  <script>
+    // ReplaceChild("nuevo","antiguo")
+    const h1 = document.createElement('h1');
+    h1.innerHTML = "<span>Hola Mundo reemplazado</span>"
+    const container = document.querySelector('.container');
+    const button1 = document.querySelector('.btn-repalceChild');
+    const h2 = document.querySelector(' h2');
+    let flag = 1;
+    console.log(flag);
+    button1.addEventListener('click',function(){
+      if (flag){
+        container.replaceChild(h1,h2);
+        flag = 0;
+      } else{
+        container.replaceChild(h2,h1);
+        flag = 1;
+      }
+    });
+
+    // copiar/clonar --> cloneNode(a)
+      // a = true se copia todoel árbol con child
+      // a = flase se copia solo el cascarón
+    const div = document.querySelector('.cloneNode');
+    div.addEventListener('click',function(){
+      alert('ola');
+    });
+    const clone = div.cloneNode(true);
+    document.querySelector('body').appendChild(clone);
+
+    // Insert before
+    const button2 = document.querySelector('.btn-insertBefore');
+    const container2 = document.querySelector('.container2');
+    const h2_2 = container2.firstChild;
+    button2.addEventListener('click',function(){
+      container2.insertBefore(h1,h2_2); // si se pone nextSibling en el h2_2 se convierte en un insertAfter
+    });
+
+  </script>
+</body>
+</html>
