@@ -1,0 +1,20 @@
+# pyrebase4: para integrar python con firebase
+pyrebase4
+
+# Flask: para implementar web con python utilizamos el microframerwork
+Flask
+
+# Se instala flask-bootstrap
+flask-bootstrap
+
+# Flask-wtf: Permite trabajar con formularios en flask
+Flask-WTF
+
+# python-decouple: sirve para poder utilizar variables de entorno
+# python-decouple
+
+# pythone-dotenv: sirve para poder utilizar variables de entorno
+python-dotenv
+
+# firebase-admin: sirve para poder trabajar con firestore
+firebase-admin

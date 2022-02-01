@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBJETOS</title>
+  <!-- Font awesome -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<style>
+  *{
+    margin: 0;
+  }
+
+  body{
+    background: rgb(34,193,195);
+    background: linear-gradient(14deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    height: 100vh;
+  }
+
+  button{
+    padding: 10px;
+  }
+
+  form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  form input{
+    margin-bottom: 10px;
+    border-radius: 4px;
+    height: 30px;
+    border: 1px solid gray;
+    box-shadow: 0 0 4px gray;
+  }
+  .btn{
+    background: green;
+    border-radius: 4px;
+    border: transparent;
+    color: white;
+    margin-top: 10px;
+  }
+  .btn:hover{
+    background: rgb(0, 61, 0);
+    box-shadow: 0 0 4px gray;
+  }
+
+  .btn-show{
+    margin: auto;
+  }
+
+  .wrapper-btn{
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .tableDatos{
+    width: 100%;
+  }
+
+  table{
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .tableDatos tr{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 20px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .tableDatos tr td{
+    align-items: center;
+    margin: auto;
+  }
+
+  .tableDatos >:nth-child(1){
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+
+  .tableDatos button{
+    padding: 5px 8px;
+    cursor: pointer;
+    /* background: red; */
+  }
+
+  .tableDatos button:hover{
+    background: white;
+    border: 2px solid gray;
+    border-radius: 2px;
+  }
+
+  .form-wrapper{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }
+
+  .form-wrapper >div{
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-wrapper table{
+    background: white;
+    border-radius: 5px;
+  }
+
+
+</style>
+<body>
+  <button>boton</button>
+  <a href="">LINK</a>
+  <form action="">
+    <label for="">Nombre</label>
+    <input class="js_name" type="text" required>
+    <label for="">Apellido</label>
+    <input class="js_lastName" type="text" required>
+    <label for="">Edad</label>
+    <input class="js_age" type="Number" required>
+    <button class="btn">Enviar</button>
+  </form>
+  <div class="wrapper-btn">
+    <button class="btn-show">Mostrar Datos Iterados</button>
+  </div>
+  <div class="form-wrapper">
+    <div>
+      <table>
+        <h3>Datos 1 envío</h3>
+        <tbody class="tableDatos">
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Opción</th>
+          </tr>
+          <!-- <tr>
+            <td>Jordan</td>
+            <td>Terrazos</td>
+            <td>27</td>
+            <td><button><i class="fas fa-trash"></i></button></td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <table>
+        <h3>Datos Iterados</h3>
+        <tbody class="tableDatos tableDatos2">
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Opción</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<script>
+  // SON MÉTODOS QUE TIENEN LOS TIPOS DE DATOS
+
+// STRING
+const cadena = "                      jordan terrazos            ";
+console.log('longitud',cadena.length);
+console.log('concat',cadena.concat('acuña'));
+console.log('includes',cadena.includes('jordan'));
+console.log('endsWith',cadena.endsWith('ian'));
+console.log('startsWith',cadena.startsWith('jor'));
+console.log('indexOf',cadena.indexOf('d'));
+console.log('lastIndexOf',cadena.lastIndexOf('n'));
+console.log('replace',cadena.replace('jordan','Ethan'));
+console.log('slice',cadena.slice(2,4));
+console.log('split',cadena.split('o'));
+console.log('toLowerCase',cadena.toLowerCase());
+console.log('toUpperCase',cadena.toUpperCase());
+console.log('trim',cadena.trim());
+
+// ARRAY
+
+console.log('===============================')
+console.log('ARRAY');
+console.log('===============================')
+const num = [0,1,2,3,4,5,6];
+const num2 = [7,8,9];
+
+console.log('length', num.length);
+console.log('isArray', Array.isArray(num));
+console.log('Array.of', Array.of('sebastian'));
+console.log('concat', num.concat(num2));
+console.log('includes', num.includes(0));
+console.log('indeOf', num.indexOf(1));
+console.log('join',num.join('/'));
+console.log('keys',num.keys().next());
+console.log('lastIndex()', num.lastIndexOf(10));
+console.log('reverse()', num.reverse());
+console.log('shift', num.shift());
+console.log('slice()',[0,1,2,3,4].slice(1, 3));
+const spliceVar = [0,1,2,3,4];
+console.log('splice()',spliceVar.splice(1, 1));
+console.log('spliceVar()', spliceVar);
+console.log('unshift()',num.unshift());
+console.log('push()', num.push(2));
+console.log('pop()', num.pop(2));
+
+// ARRAY MÉTODOS
+
+const alumnos = [
+  {
+    name: 'Jordan',
+    age: 27,
+    gender: 'm',
+  },
+  {
+    name: 'Ethan',
+    age: 5,
+    gender: 'm',
+  },
+  {
+    name: 'Lucero',
+    age: 28,
+    gender: 'f',
+  },
+  {
+    name: 'Jovita',
+    age: 51,
+    gender: 'f',
+  }
+];
+
+const alumnosFullData = alumnos.map((alumno) => {
+  return{
+    ...alumno,
+    grade: '5',
+    school: 'miguel de cervantes',
+  };
+});
+
+console.log('alumnos', alumnos);
+console.log('alumnosFullData', alumnosFullData);
+
+// FILTER
+const alumnosMayores30 = alumnos.filter((alumno) => alumno.age>30)
+console.log('alumnosMayores30', alumnosMayores30);
+console.log('alumnnos',alumnos);
+
+// FIND
+const alumnoJordan = alumnos.find((alumno) => alumno.name === 'Jordan');
+console.log('find',alumnoJordan)
+
+// FINDINDEX
+const alumnoJordanIndex = alumnos.findIndex((alumno) => alumno.name.toLowerCase === 'lucero');
+console.log('findIndex', alumnoJordanIndex)
+
+// SOME
+const someMayor30 = alumnos.some((alumno) => alumno.age > 30);
+console.log(someMayor30);
+
+// EVERY
+const everyMayor30 = alumnos.every((alumno) => alumno.age > 30);
+console.log(everyMayor30);
+
+// REDUCE
+const numeros = [0,1,2,3,4,5,6];
+const resultado = numeros.reduce((acumulado, valorActual) => {
+  console.log('acumulado', acumulado)
+  console.log('valor actual', valorActual)
+  return acumulado + valorActual
+},0)
+
+console.log('resultado', resultado);
+
+// objetc
+console.log('=======================')
+
+const objeto = {
+  name: 'sebastian',
+  lastName: 'yabiku'
+};
+
+const objeto2 = {
+  age: 3,
+  country: 'peru'
+};
+
+const objeto3 = {
+  age: 44,
+  country: 'Australia'
+};
+
+// Objetc.assign =crea copia de objetos
+const copia = Object.assign({}, objeto, objeto2, objeto3);
+console.log('copia',copia);
+
+// Object.entries = entrega colección de clave, valor
+console.log('object.entries',Object.entries(copia));
+
+// Object.keys = entrega colección con las llaves del objeto
+console.log('Object.keys',Object.keys(copia));
+
+// Object.values = Entrega colección con valores del objeto
+console.log('Object.values', Object.values(copia));
+
+// Object.hasOwnProperty = Entrega valor booleano si la prpopiedad existe en el objeto
+console.log('Object.hasOwnProperty',copia.hasOwnProperty('age'));
+
+// Number
+// parseInt = convierte el valor en número
+console.log(Number.parseInt('3'));
+
+// parseFloat = covierte el valopr en flotante
+console.log(Number.parseFloat('3.14'));
+
+// toFixed = indica la cantidad de números decimales se va a tener
+console.log(Number.parseFloat('3.14').toFixed(5));
+
+// MATH
+// pow = es para realizar esponencial
+console.log(Math.pow(9,2))
+// round = es para redondear un número
+console.log(Math.round(5.5))
+
+// DATE
+console.log('getData',new Date().getDate())
+console.log('getMonth', new Date().getMonth())
+console.log('getDay', new Date().getDay())
+console.log('getHours', new Date().getHours())
+console.log('getMinutes', new Date().getMinutes())
+console.log('getSeconds', new Date().getSeconds())
+
+// Ejercicios
+
+console.log('============================');
+console.log('Ejercicios');
+console.log('============================');
+
+let array = [1,2,3,4,5,6,7];
+
+console.log(array.length);
+
+let stringName = ('Jordan Terrazos')
+console.log(stringName.length)
+
+console.log(stringName.toUpperCase())
+
+// WINDOW
+
+// alert
+// prompt
+// confirm
+
+// SetTimeOut hace que después del tiempo definido se ejecute la acción
+// setTimeout(() => {
+//   console.log('setTimeOut', new Date().getSeconds());
+// }, 1000)
+
+// // SetInterval crea un intervalo de tiempo en el que se ejecuta el código
+// let refInterval = setInterval(() => {
+//   console.log('setInterval', new Date().getSeconds())
+// }, 1000)
+
+// document.querySelector('button').onclick = function(){
+//   clearInterval(refInterval)
+// }
+
+document.querySelector('a').onclick = (e) => {
+  e.preventDefault()
+  window.open('https://www.google.com')
+}
+
+// Geolocation: Te brinda las coordenadas del lugar en el donde te encuentras
+
+
+// navigator.online : Indica si se cuenta con acceso a internet
+// en base a esto se puede enviar algunos mensajes al usuario
+
+// Ejercicios 2
+
+// 1.- A travéz de prompt agregar nombresd y gaurdarlo en una colección hasta la cantidad
+// de 10 nombres, cuando se llegue a 10 nombres imprimir con alert "la cantidad se completó"
+// La Lista de los nombres imprimirla en el navegador
+
+// console.log('===================')
+
+// let nombresObj = [];
+
+// while(nombresObj.length < 10){
+//   let inputNombre = prompt('in, 61, 0)gresa tu nombre');
+//   nombresObj.push(inputNombre)
+// }
+// console.log(nombresObj)
+// document.write("<br>")
+// document.write("<br>")
+// document.write(nombresObj)
+
+// 2.- Crear un formulario con los campos nombre, apeliido, edad. Por cada envío del formulario, guardar
+// los valores en una colección de objetos. Esta colección iterarla e imprimir los datos en el navegador
+
+let submit = document.querySelector('form');
+let arrayObj = [];
+let arrayObj2 = [];
+let name = document.querySelector('.js_name');
+let lastName = document.querySelector('.js_lastName');
+let age = document.querySelector('.js_age');
+let btnShow = document.querySelector('.btn-show');
+let tableDatos = document.querySelector('.tableDatos');
+let tableDatos2= document.querySelector('.tableDatos2');
+
+submit.addEventListener('submit',(e) => {
+  e.preventDefault();
+  let arrayObjContenct = {};
+  arrayObjContenct.name = name.value;
+  arrayObjContenct.lastName = lastName.value;
+  arrayObjContenct.age = age.value;
+  arrayObj.push(arrayObjContenct);
+  console.log(arrayObj[0]);
+
+  let elementoTabla = document.createElement('tr');
+  elementoTabla.innerHTML = `
+  <td>${name.value}</td>
+  <td>${lastName.value}</td>
+  <td>${age.value}</td>
+  <td><button><i class='fas fa-trash'></i></button></td>
+  `;
+  tableDatos.append(elementoTabla);
+  submit.reset();
+
+  elementoTabla.querySelector('button').addEventListener('click',()=>{
+    elementoTabla.parentElement.removeChild(elementoTabla);
+  });
+
+
+});
+
+btnShow.addEventListener('click',(e)=>{
+  for (let x in arrayObj){
+    const showData = document.createElement('tr');
+    for (let xy in arrayObj[x]){
+        const h2Element = document.createElement('td')
+        h2Element.innerHTML = `
+        ${arrayObj[x][xy]}
+        `;
+        showData.appendChild(h2Element);
+        console.log(arrayObj[x][xy]);
+    }
+    let buttonX = document.createElement('td');
+    buttonX.innerHTML = "<button><i class='fas fa-trash'></i></button>";
+    showData.appendChild(buttonX);
+    tableDatos2.appendChild(showData);
+    showData.querySelector('button').addEventListener('click',()=>{
+      showData.parentElement.removeChild(showData);
+    });
+  }
+  arrayObj.length = 0
+});
+
+</script>
+</html>

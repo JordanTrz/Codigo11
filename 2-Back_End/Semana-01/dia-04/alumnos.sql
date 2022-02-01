@@ -1,0 +1,6 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "alumnos" (
+	"nombre"	TEXT,
+	"email"	TEXT
+);
+COMMIT;

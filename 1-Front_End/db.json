@@ -1,0 +1,22 @@
+{
+  "alumnos": [
+    {
+      "name": "Ethan",
+      "lastname": "Ybarhuen",
+      "age": "5",
+      "id": 1
+    },
+    {
+      "name": "ASDF",
+      "lastname": "ASDF",
+      "age": "12",
+      "id": 2
+    }
+  ],
+  "Colegios": [
+    {
+      "colegio": "latino",
+      "ciudad": "Lima"
+    }
+  ]
+}

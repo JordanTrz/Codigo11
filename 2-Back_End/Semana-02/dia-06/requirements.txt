@@ -1,0 +1,14 @@
+# Descargamos el microframework
+Flask
+
+# ORM para manipular bases de datos relacionales
+Flask-SQLAlchemy
+
+# instalar flask marshmallow: sirve para crear modelos de orm y serializarlos con la base de datos
+flask-marshmallow
+
+# Integra marshmallow con sqlaclchemy
+marshmallow-sqlalchemy
+
+# librería para conectar sql
+mysqlclient
