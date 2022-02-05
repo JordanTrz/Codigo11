@@ -16,19 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
-# Se tiene que importar las librerías del jwt
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('App.urls')),
-    # Se agrega los paths del jwt
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('',include('api.urls')),
+    path('login', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
-
-# Se tiene que mandar el token mediante thunderbolt o postman
-# metodo GET, al mismo puerto 8000 con el token
