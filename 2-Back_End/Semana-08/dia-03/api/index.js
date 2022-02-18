@@ -47,7 +47,7 @@ app.post('/alumno',(req,res)=>{
 app.put('/alumno/:id',(req,res)=>{
   const {alumno_nombre,alumno_email} = req.body;
   const {id} = req.params;
-  const query = `update tbl_alumno set alumno_nombre=?,alumno_email=? where alumno_id=?`
+  const query = `update tbl_alumno set alumno_nombre=?,alumno_email=? where alumno_id=?`;
 
   mysqlConnection.query(query,[alumno_nombre,alumno_email,id],(err,rows,fields)=>{
     if(!err){
