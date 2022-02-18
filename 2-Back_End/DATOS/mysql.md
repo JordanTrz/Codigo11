@@ -4,6 +4,9 @@ se ingresa desde el terminal utilizando:
 
 sudo mysql
 
+** se tuvo problemas para poder restableces la contraseña, se arregló con el tutorial de la pag:
+https://devanswers.co/how-to-reset-mysql-root-password-ubuntu/
+
 se utiliza la función "select"
 
 select current_date;

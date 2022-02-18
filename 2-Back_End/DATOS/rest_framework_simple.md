@@ -23,3 +23,11 @@ ahora con el token se ingresa al thunderclient o al postman y se manda en la opc
 
 tarea:
 investigar cómo enviar el token desde React
+
+____________________________________________________
+
+para poder importar y tener las views de una base ya creada y con datos:
+
+python manage.py inspectdb
+
+python manage.py inspectdb > base/models.py

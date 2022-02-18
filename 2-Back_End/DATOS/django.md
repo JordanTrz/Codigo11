@@ -26,7 +26,7 @@ Se tiene una estructura:
 
 View: Es la ruta en django
 Template: Es el HTML
-Model: 
+Model:
 
 python3 manage.py migrate --> para que se migren las classes a las tablas de la base de datos.
 
@@ -114,6 +114,8 @@ urlpatterns = [
     path('', include('tienda.urls')),
     path('admin/', admin.site.urls)
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
 
 
 
